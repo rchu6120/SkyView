@@ -1,6 +1,5 @@
 public class SkyView {
     private double[][] view;
-
     public SkyView(int numRows, int numCols, double[] scanned) {
         view = new double[numRows][numCols];
         int i = 0;
@@ -10,9 +9,11 @@ public class SkyView {
                     view[row][col] = scanned[i];
                     i++;
                 }
-            } else {
+            }
+            else {
                 for (int col = numCols - 1; col >= 0; col--) {
                     view[row][col] = scanned[i];
+                    i++;
                 }
             }
         }
