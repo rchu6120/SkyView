@@ -2,18 +2,18 @@ public class SkyView {
     private double[][] view;
     public SkyView(int numRows, int numCols, double[] scanned) {
         view = new double[numRows][numCols];
-        int i = 0;
+        int scannedIndex = 0;
         for (int row = 0; row < numRows; row++) {
             if (row % 2 == 0) {
                 for (int col = 0; col < numCols; col++) {
-                    view[row][col] = scanned[i];
-                    i++;
+                    view[row][col] = scanned[scannedIndex];
+                    scannedIndex++;
                 }
             }
             else {
                 for (int col = numCols - 1; col >= 0; col--) {
-                    view[row][col] = scanned[i];
-                    i++;
+                    view[row][col] = scanned[scannedIndex];
+                    scannedIndex++;
                 }
             }
         }
